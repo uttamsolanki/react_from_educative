@@ -1,8 +1,14 @@
-import React from 'react';
- 
-const App =()=>
-    {
-        return <p> Hello Word from App Component</p>
-    } 
+import React from "react";
+import Nav from "./Nav";
 
- export default App;;
+const menus = [
+  { key: "home", label: "Home", url: "#home" },
+  { key: "product", label: "Product", url: "#product" },
+  { key: "about", label: "About", url: "#about" },
+  { key: "secure", label: "Secure", disabled: true, url: "secure" },
+];
+
+const App = () => {
+  return <Nav items={menus} selected="home" />;
+};
+export default App;
