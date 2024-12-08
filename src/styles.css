@@ -1,34 +1,78 @@
 body {
   font-family: sans-serif;
-  -webkit-font-smoothing: auto;
-  -moz-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-smoothing: auto;
   text-rendering: optimizeLegibility;
-  font-smooth: always;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
+  background-color: #f7ede2; /* Purple background */
+  color: #fff; /* White text color */
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  background: #f7f2e4;
-  color: #482e19;
-}
-
-ul {
-  list-style: none;
+/* Navigation Bar */
+#navigation-bar {
+  background-color: #1f1e63; /* Dark purple navigation bar */
+  color: #fff;
+  padding: 1rem;
   display: flex;
+  justify-content: center; /* Center alignment */
+  align-items: center;
 }
-li {
-  margin: 1rem;
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
-li.active {
-  border-bottom: 2px solid black;
+
+.nav-menu li {
+  margin: 10px;
+  position: relative;
+}
+
+.nav-menu li li {
+  padding: 1rem;
+  position: relative;
+  border-radius: 5px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  padding: 1rem;
+}
+
+.nav-menu li:hover {
+  background-color: #4a47a3; /* Darker purple on hover */
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #6c5ce7; /* Dark purple sub-menu */
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 5px; /* Added border radius */
+}
+
+.nav-menu li:hover .sub-menu {
+  display: block;
 }
 
 button {
-  border: none;
-  background: none;
-  font-size: 18px;
+  padding: 10px 20px; /* Increased button padding */
+  border-radius: 5px;
+  border: 0;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Added color transition */
+}
+
+button:hover {
+  background-color: #4a47a3; /* Darker purple on hover */
+  color: #fff; /* White text color on hover */
 }
